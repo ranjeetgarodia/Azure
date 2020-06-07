@@ -3,11 +3,12 @@
 #creating newcontainer and adding files to it.
 az storage container create --name newcontainer --account-name "storagecopy001" --account-key "5Caww4OwZlRujOkNzREhHe74QxPqvXCP3mPMqaAn635LfhQWXloLZAdFASAtpphUq8oz6W8i6z9oehzqy8eJPw=="
 
-2. Using the Azure CLI to upload a blob
+2. Using the Azure CLI to upload a blob using account-key & upload command
 az storage blob upload --container-name newcontainer --name testfile --file testfile --account-name "storagecopy001" --account-key "5Caww4OwZlRujOkNzREhHe74QxPqvXCP3mPMqaAn635LfhQWXloLZAdFASAtpphUq8oz6W8i6z9oehzqy8eJPw=="
 
-3. Using the AzCopy tool to upload a blob
+3. Using the AzCopy tool to upload a blob 
 Download link for AzCopy - https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10
 
+# use below command to upload/copy file using SAS key.. give file(azcopy.txt) with SAS to copy into container 
 .\azcopy.exe copy azcopy.txt "https://storagecopy001.blob.core.windows.net/newcontainer/azcopy.txt?sv=2019-10-10&ss=b&srt=sco&sp=rwlacx&se=2020-06-08T01:34:37Z&st=2020-06-07T17:34:37Z&spr=https&sig=6P8Q1Js1ho62%2BOHzKFGXWpuPKMiP8sz44Qd8Cgq%2ByQs%3D"
 
