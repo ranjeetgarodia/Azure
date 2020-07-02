@@ -1,0 +1,5 @@
+# create VM with giving password
+az vm create --resource-group azuredemo --name demovm --image win2016datacenter --admin-username demousr --admin-password AzurePortal@123
+
+## create vm, will promt for password
+az vm create --resource-group myResourceGroup --name demovm --image win2016datacenter --admin-username demousr
