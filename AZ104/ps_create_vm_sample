@@ -1,0 +1,6 @@
+
+## create vm using Get-Credential - it will promt for admin-user & admin-password
+New-AzVm -ResourceGroupName myResourceGroup -Name demovm -Location CentralUS -Image win2016datacenter -Credential (Get-Credential)
+
+## create vm by passing admin-user 7 admin-password
+New-AzVm -ResourceGroupName myResourceGroup -Name demovm01-Location CentralUS -Image win2016datacenter -admin-user demouser -admin-password ranjeet@2020
