@@ -1,5 +1,7 @@
 ## create resource-group
-az group create -n azuredemo -l westus
+az group create -n azuredemo -l westus 
+## or 
+az group create --name mygroup2 --location centralus
 
 # create VM with giving password
 az vm create --resource-group azuredemo --name demovm --image win2016datacenter --admin-username demousr --admin-password AzurePortal@123
