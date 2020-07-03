@@ -1,0 +1,4 @@
+## run custom extension script on vm.
+## below case is for linux vm to install webservice.
+
+az vm extension set --resource-group mygroup1 --vm-name mylinux --name customScript --publisher Microsoft.Azure.Extensions --settings customscript_extension.json
