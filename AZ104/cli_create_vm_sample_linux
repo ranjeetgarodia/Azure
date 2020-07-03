@@ -2,4 +2,4 @@
 az group create --name mygroup1 --location eastus
 
 ## create ubuntu linux vm
-az vm create --resource-group mygroup1 --name mylinux --image UbuntuLTS --admin-username azureuser --admin-password ranjeet@2020
+az vm create --resource-group mygroup1 --name mylinux --image UbuntuLTS --admin-username azureuser --admin-password azureuser@2020
