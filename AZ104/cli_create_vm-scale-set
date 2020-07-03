@@ -1,0 +1,5 @@
+## create group
+az group create --name azuredemo --location eastus
+
+## creeate vm scale-set, with instance-count as '1', enabling public ip-address
+az vmss create --resource-group azuredemo --name scaletset --image Win2016Datacenter --instance-count 1 --public-ip-per-vm --admin-username azureuser --admin-password ranjeet@2020
