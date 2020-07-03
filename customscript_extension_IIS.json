@@ -1,0 +1,5 @@
+## download script & run on vm to install IIS on windows machine
+{
+  "fileUris": ["https://raw.githubusercontent.com/ranjeetgarodia/Azure/master/Windows_Install_IIS.ps1"],
+  "commandToExecute": "powershell.exe ./Windows_Install_IIS.ps1"
+}
