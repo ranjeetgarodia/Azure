@@ -1,0 +1,25 @@
+## create VM:
+New-AzVm -ResourceGroupName myResourceGroup -Name demovm -Location CentralUS -Image win2016datacenter -Credential (Get-Credential)
+
+###  define variables #####
+$resourcegroup = 'myResourceGroup'
+$machinename = 'demovm'
+$location = 'Central US'
+$storageType = 'Premium_LRS'
+$dataDiskName = 'newdisk01'
+$dataDiskSize = 10
+
+## define data disk-configuration
+$datadiskConfig = New-AzDiskConfig -SkuName $storageType -Location $location -CreateOption Empty -DiskSizeGB $dataDiskSize
+
+## create disk
+$dataDisk01 = New-AzDisk -DiskName $dataDiskName -Disk $datadiskConfig -ResourceGroupName $resourcegroup
+
+## get VM details 
+$vm = Get-AzVM -Name $machinename -ResourceGroupName $resourcegroup
+
+## attaching disk to vm 
+$vm = Add-AzVMDataDisk -VM $vm -Name $dataDiskName -CreateOption Attach -ManagedDiskId $dataDisk01.Id -Lun 1
+
+## update/save after attaching disk to vm
+Update-AzVM -VM $vm -ResourceGroupName $resourcegroup
