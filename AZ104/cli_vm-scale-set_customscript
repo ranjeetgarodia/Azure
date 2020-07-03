@@ -1,0 +1,7 @@
+## run cli command to install IIS 
+
+az vmss extension set --resource-group azuredemo --vmss-name scaletset --name CustomScriptExtension --publisher "Microsoft.Compute" --version 1.10  --settings "customscript_extension_IIS.json" 
+
+## or using similar command which we used to install customscript for VM
+
+az vmss extension set --resource-group azuredemo --vmss-name scaletset --name customScript --publisher Microsoft.Azure.Extensions --settings customscript_extension_IIS.json
