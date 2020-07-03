@@ -2,4 +2,4 @@
 az create group --name mygroup --location eastus
 
 ## create vm with passing argument of custom-data cloud-init script to install nginx
-az vm create --resource-group mygroup --name linuxvm003 --image ubuntults --custom-data linux_cloud-init_script.yml --admin-username azureuser --admin-password azureuser@202
+az vm create --resource-group mygroup --name linuxvm003 --image ubuntults --custom-data linux_cloud-init_script.yml --admin-username azureuser --admin-password azureuser@2020
