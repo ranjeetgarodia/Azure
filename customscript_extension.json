@@ -1,0 +1,8 @@
+
+## give script-path uri & command to run this script
+## linux_install_webservice.sh script have command to install webservice on linux vm
+
+{
+  "fileUris": ["https://raw.githubusercontent.com/ranjeetgarodia/Azure/master/linux_install_webservice.sh"],
+  "commandToExecute": "./linux_install_webservice.sh"
+}
