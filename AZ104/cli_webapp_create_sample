@@ -1,0 +1,5 @@
+## create app service plan
+az appservice plan create --name webappplan7000 --resource-group azuredemo --sku B1
+
+## create webapp and link it with app service plan
+az webapp create --name webapp9000 --plan webappplan7000 --resource-group azuredemo
