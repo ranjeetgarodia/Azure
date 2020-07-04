@@ -1,0 +1,3 @@
+## command to encrypt disk associated with VM. Also possible to encrypt only OS or Data disk 
+## provide key-vault name 
+az vm encryption enable --resource-group mygroup --name winvm --disk-encryption-keyvault myvaultrg001
