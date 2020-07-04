@@ -1,0 +1,8 @@
+## get vm info
+$vm = Get-AzVM -ResourceGroupName azuredemo -VMName newvm
+
+#set new VM size 
+$vm.HardwareProfile.VmSize ="Standard_DS1_v2"
+
+#update/save new configuration
+Update-AzVM -VM $vm -ResourceGroupName azuredemo
