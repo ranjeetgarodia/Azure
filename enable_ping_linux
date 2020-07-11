@@ -1,0 +1,16 @@
+## enable or disable ICMP ping on ubuntu linux machine
+
+## to disable -- 
+echo 1 > /proc/sys/net/ipv4/icmp_echo_ignore_all
+
+## to enable --
+echo 0 > /proc/sys/net/ipv4/icmp_echo_ignore_all
+
+## not sure for below changes -- but above is working for disabling/enabling icmp ping using IP4 version
+
+To make the change permanent you will need to change the sysctl.conf file by typing the following
+sudo gedit /etc/sysctl.conf 
+
+Add the following line under #net.ipv6.conf.all.forwarding=1
+
+net.ipv4.icmp_echo_ignore_all=1
