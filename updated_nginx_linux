@@ -1,0 +1,5 @@
+## check below files where default html pages are present under nginx 
+cat /etc/nginx/sites-enabled/default
+
+## updated default html pages content
+vi /var/www/html/index.nginx-debian.html
