@@ -1,0 +1,17 @@
+
+## use command to open registry edit 
+regedit
+
+## got to below path/navigate to enabling ip_forarding 
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters
+
+## enable below variable set to 1 
+IPEnableRouter 
+
+## now we can check if ip_forward is enabled or not
+netsh interface ipv4 show interfaces $interface_card_id
+
+--output 
+Forwarding                         : enabled
+
+## if not enable, restart windows PC
