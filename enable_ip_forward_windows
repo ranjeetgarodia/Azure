@@ -15,3 +15,8 @@ netsh interface ipv4 show interfaces $interface_card_id
 Forwarding                         : enabled
 
 ## if not enable, restart windows PC
+
+
+## from public vm how to check traceroute & ping
+tracert 10.0.2.4 ##this is ip of private vm, now it should be given via dmzvm (10.0.1.4)
+ping 10.0.2.4
