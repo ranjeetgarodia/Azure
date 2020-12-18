@@ -1,0 +1,19 @@
+//to login to linux VM via cli 
+
+ssh username@public_ip
+
+//enable ipv4
+sudo sysctl -w net.ipv4.ip_forward=1
+
+//install traceroute 
+sudo apt-get update -y
+sudo apt install traceroute -y
+
+// to check vm2 conenctivity using its name or ip via another route VM's
+traceroute 10.1.0.4
+
+or
+
+traceroute app-frontend-vm1
+
+
